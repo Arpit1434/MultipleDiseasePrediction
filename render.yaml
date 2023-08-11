@@ -2,4 +2,4 @@ services:
   - name: multiple-disease-predictions
     env: python=3.8
     startupCommand: gunicorn -b :$PORT app:app
-    healthCheckPath: /
+    port: 8000
