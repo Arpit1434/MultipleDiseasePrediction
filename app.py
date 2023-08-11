@@ -1,11 +1,11 @@
 import joblib
-from flask import Flask, render_template, url_for, request, jsonify
+from flask import Flask, redirect, render_template, url_for, request, jsonify
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html", staticURL="")
+    return redirect("/diabetes")
 
 @app.route("/diabetes")
 def diabetes():
