@@ -1,6 +1,4 @@
 import joblib
-from sklearnex import patch_sklearn
-patch_sklearn()
 from flask import Flask, render_template, url_for, request, jsonify
 
 app = Flask(__name__)
