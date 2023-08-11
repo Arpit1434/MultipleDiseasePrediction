@@ -1,0 +1,253 @@
+{% extends "layout.html" %} {% block body %}
+<div class="container my-4">
+  <h1 class="my-4">Parkinson's Prediction</h1>
+  <form class="row gx-3 gy-3 align-items-center" id="parkinsons-form">
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="fo">fo</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="fo"
+        name="fo"
+        placeholder="MDVP:Fo(Hz)"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="fhi">fhi</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="fhi"
+        name="fhi"
+        placeholder="MDVP:Fhi(Hz)"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="flo">flo</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="flo"
+        name="flo"
+        placeholder="MDVP:Flo(Hz)"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="Jitter_percent">Jitter_percent</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="Jitter_percent"
+        name="Jitter_percent"
+        placeholder="MDVP:Jitter(%)"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="Jitter_Abs">Jitter_Abs</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="JJitter_Abs"
+        name="Jitter_Abs"
+        placeholder="MDVP:Jitter(Abs)"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="RAP">RAP</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="RAP"
+        name="RAP"
+        placeholder="MDVP:RAP"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="PPQ">PPQ</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="PPQ"
+        name="PPQ"
+        placeholder="MDVP:PPQ"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="DDP">DDP</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="DDP"
+        name="DDP"
+        placeholder="Jitter:DDP"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="Shimmer">Shimmer</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="Shimmer"
+        name="Shimmer"
+        placeholder="MDVP:Shimmer"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="Shimmer_dB">Shimmer_dB</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="Shimmer_dB"
+        name="Shimmer_dB"
+        placeholder="MDVP:Shimmer(dB)"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="APQ3">APQ3</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="APQ3"
+        name="APQ3"
+        placeholder="Shimmer:APQ3"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="APQ5">APQ5</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="APQ5"
+        name="APQ5"
+        placeholder="Shimmer:APQ5"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="APQ">APQ</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="APQ"
+        name="APQ"
+        placeholder="MDVP:APQ"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="DDA">DDA</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="DDA"
+        name="DDA"
+        placeholder="Shimmer:DDA"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="NHR">NHR</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="NHR"
+        name="NHR"
+        placeholder="NHR"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="HNR">HNR</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="HNR"
+        name="HNR"
+        placeholder="HNR"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="RPDE">RPDE</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="RPDE"
+        name="RPDE"
+        placeholder="RPDE"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="DFA">DFA</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="DFA"
+        name="DFA"
+        placeholder="DFA"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="spread1">spread1</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="spread1"
+        name="spread1"
+        placeholder="spread1"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="spread2">spread2</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="spread2"
+        name="spread2"
+        placeholder="spread2"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="D2">D2</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="D2"
+        name="D2"
+        placeholder="D2"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="PPE">PPE</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="PPE"
+        name="PPE"
+        placeholder="PPE"
+      />
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Predict</button>
+    </div>
+  </form>
+  <div id="parkinsons-prediction"></div>
+</div>
+{% endblock %}

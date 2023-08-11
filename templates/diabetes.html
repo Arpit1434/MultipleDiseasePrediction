@@ -1,0 +1,101 @@
+{% extends "layout.html" %} {% block body %}
+<div class="container my-4">
+  <h1 class="my-4">Diabetes Prediction</h1>
+  <form class="row gx-3 gy-3 align-items-center" id="diabetes-form">
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="Pregnancies">Pregnancies</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="Pregnancies"
+        name="Pregnancies"
+        placeholder="Number of Pregnancies"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="Glucose">Glucose</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="Glucose"
+        name="Glucose"
+        placeholder="Glucose Level"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="BloodPressure">BloodPressure</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="BloodPressure"
+        name="BloodPressure"
+        placeholder="Blood Pressure value"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="SkinThickness">SkinThickness</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="SkinThickness"
+        name="SkinThickness"
+        placeholder="Skin Thickness value"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="Insulin">Insulin</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="Insulin"
+        name="Insulin"
+        placeholder="Insulin Level"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="BMI">BMI</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="BMI"
+        name="BMI"
+        placeholder="BMI value"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="DiabetesPedigreeFunction"
+        >DiabetesPedigreeFunction</label
+      >
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="DiabetesPedigreeFunction"
+        name="DiabetesPedigreeFunction"
+        placeholder="Diabetes Pedigree Function value"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="Age">Age</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="Age"
+        name="Age"
+        placeholder="Age of the Person"
+      />
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Predict</button>
+    </div>
+  </form>
+  <div id="diabetes-prediction"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "layout.html" %} {% block body %}
+<div class="container my-4">
+  <h1 class="my-4">Heart Disease Prediction</h1>
+  <form class="row gx-3 gy-3 align-items-center" id="heart-disease-form">
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="age">age</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="age"
+        name="age"
+        placeholder="Age"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="sex">sex</label>
+      <select class="form-select" id="sex" name="sex">
+        <option selected>Sex</option>
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="cp">cp</label>
+      <select class="form-select" id="cp" name="cp">
+        <option selected>Chest Pain types</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="trestbps">trestbps</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="trestbps"
+        name="trestbps"
+        placeholder="Resting Blood Pressure"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="chol">chol</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="chol"
+        name="chol"
+        placeholder="Serum Cholestoral in mg/dl"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="fbs">fbs</label>
+      <select class="form-select" id="fbs" name="fbs">
+        <option selected>Fasting Blood Sugar > 120 mg/dl</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="restecg">restecg</label>
+      <select class="form-select" id="restecg" name="restecg">
+        <option selected>Resting Electrocardiographic results</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="thalach">thalach</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="thalach"
+        name="thalach"
+        placeholder="Maximum Heart Rate achieved"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="exang">exang</label>
+      <select class="form-select" id="exang" name="exang">
+        <option selected>Exercise Induced Angina</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="oldpeak">oldpeak</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="oldpeak"
+        name="oldpeak"
+        placeholder="ST depression induced by exercise"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="slope">slope</label>
+      <input
+        type="number"
+        step="any"
+        class="form-control"
+        id="slope"
+        name="slope"
+        placeholder="Slope of the peak exercise ST segment"
+      />
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="ca">ca</label>
+      <select class="form-select" id="ca" name="ca">
+        <option selected>Major vessels colored by flourosopy</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+    <div class="col-sm-3">
+      <label class="visually-hidden" for="thal">thal</label>
+      <select class="form-select" id="thal" name="thal">
+        <option selected>thal</option>
+        <option value="1">normal</option>
+        <option value="2">fixed defect</option>
+        <option value="3">reversable defect</option>
+      </select>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Predict</button>
+    </div>
+  </form>
+  <div id="heart-disease-prediction"></div>
+</div>
+{% endblock %}
