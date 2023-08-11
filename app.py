@@ -94,4 +94,6 @@ def parkinsonspredict():
     else:
         return jsonify({"message": "The person does not have Parkinson's disease", "status": "success"})
 
-app.run()
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app)
