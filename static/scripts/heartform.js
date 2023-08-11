@@ -6,6 +6,12 @@ heartDiseaseForm.addEventListener("submit", async (e) => {
   const heartDiseasePrediction = document.getElementById(
     "heart-disease-prediction"
   );
+  heartDiseasePrediction.scrollIntoView({ behavior: "smooth" });
+  heartDiseasePrediction.innerHTML = `<div class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>`;
   try {
     const response = await fetch("/heart/predict", {
       method: "POST",
@@ -50,4 +56,5 @@ heartDiseaseForm.addEventListener("submit", async (e) => {
       `;
     heartDiseasePrediction.innerHTML = html;
   }
+  heartDiseasePrediction.scrollIntoView({ behavior: "smooth" });
 });

@@ -4,6 +4,12 @@ parkinsonsForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(parkinsonsForm);
   const parkinsonsPrediction = document.getElementById("parkinsons-prediction");
+  parkinsonsPrediction.scrollIntoView({ behavior: "smooth" });
+  parkinsonsPrediction.innerHTML = `<div class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>`;
   try {
     const response = await fetch("/parkinsons/predict", {
       method: "POST",
@@ -48,4 +54,5 @@ parkinsonsForm.addEventListener("submit", async (e) => {
       `;
     parkinsonsPrediction.innerHTML = html;
   }
+  parkinsonsPrediction.scrollIntoView({ behavior: "smooth" });
 });

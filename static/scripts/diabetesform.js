@@ -4,6 +4,12 @@ diabetesForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(diabetesForm);
   const diabetesPrediction = document.getElementById("diabetes-prediction");
+  diabetesPrediction.scrollIntoView({ behavior: "smooth" });
+  diabetesPrediction.innerHTML = `<div class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>`;
   try {
     const response = await fetch("/diabetes/predict", {
       method: "POST",
@@ -48,4 +54,5 @@ diabetesForm.addEventListener("submit", async (e) => {
       `;
     diabetesPrediction.innerHTML = html;
   }
+  diabetesPrediction.scrollIntoView({ behavior: "smooth" });
 });
