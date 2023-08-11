@@ -1,9 +1,23 @@
 {% extends "layout.html" %} {% block body %}
 <div class="container my-4">
-  <h1 class="my-4"><i style="font-size:32px" class="fa mx-2">&#xf2ce;</i>Diabetes Prediction</h1>
+  <h1 class="my-4">
+    <i style="font-size: 32px" class="fa mx-2">&#xf2ce;</i>Diabetes Prediction
+  </h1>
+  <ul>
+    <li>Pregnancies: Number of times pregnant</li>
+    <li>
+      Glucose: Plasma glucose concentration a 2 hours in an oral glucose
+      tolerance test
+    </li>
+    <li>BloodPressure: Diastolic blood pressure (mm Hg)</li>
+    <li>SkinThickness: Triceps skin fold thickness (mm)</li>
+    <li>Insulin: 2-Hour serum insulin (mu U/ml)</li>
+    <li>BMI: Body mass index (weight in kg/(height in m)^2)</li>
+    <li>DiabetesPedigreeFunction: Diabetes pedigree function</li>
+    <li>Age: Age (years)</li>
+  </ul>
   <form class="row gx-3 gy-3 align-items-center" id="diabetes-form">
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="Pregnancies">Pregnancies</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -12,9 +26,9 @@
         name="Pregnancies"
         placeholder="Number of Pregnancies"
       />
+      <label for="Pregnancies">Number of Pregnancies</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="Glucose">Glucose</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -23,9 +37,9 @@
         name="Glucose"
         placeholder="Glucose Level"
       />
+      <label for="Glucose">Glucose Level</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="BloodPressure">BloodPressure</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -34,9 +48,9 @@
         name="BloodPressure"
         placeholder="Blood Pressure value"
       />
+      <label for="BloodPressure">Blood Pressure value</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="SkinThickness">SkinThickness</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -45,9 +59,9 @@
         name="SkinThickness"
         placeholder="Skin Thickness value"
       />
+      <label for="SkinThickness">Skin Thickness value</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="Insulin">Insulin</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -56,9 +70,9 @@
         name="Insulin"
         placeholder="Insulin Level"
       />
+      <label for="Insulin">Insulin Level</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="BMI">BMI</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -67,11 +81,9 @@
         name="BMI"
         placeholder="BMI value"
       />
+      <label for="BMI">BMI value</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="DiabetesPedigreeFunction"
-        >DiabetesPedigreeFunction</label
-      >
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -80,9 +92,11 @@
         name="DiabetesPedigreeFunction"
         placeholder="Diabetes Pedigree Function value"
       />
+      <label for="DiabetesPedigreeFunction"
+        >Diabetes Pedigree Function value</label
+      >
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="Age">Age</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -91,6 +105,7 @@
         name="Age"
         placeholder="Age of the Person"
       />
+      <label for="Age">Age of the Person</label>
     </div>
     <div class="col-auto">
       <button type="submit" class="btn btn-primary">Predict</button>

@@ -1,9 +1,22 @@
 {% extends "layout.html" %} {% block body %}
 <div class="container my-4">
-  <h1 class="my-4"><i style="font-size:32px" class="fa mx-2">&#xf085;</i>Parkinson's Prediction</h1>
+  <h1 class="my-4">
+    <i style="font-size: 32px" class="fa mx-2">&#xf085;</i>Parkinson's
+    Prediction
+  </h1>
+  <ul>
+    <li>MDVP:Fo(Hz) - Average vocal fundamental frequency</li>
+    <li>MDVP:Fhi(Hz) - Maximum vocal fundamental frequency</li>
+    <li>MDVP:Flo(Hz) - Minimum vocal fundamental frequency</li>
+    <li>MDVP:Jitter(%), MDVP:Jitter(Abs), MDVP:RAP, MDVP:PPQ, Jitter:DDP - Several measures of variation in fundamental frequency</li>
+    <li>MDVP:Shimmer, MDVP:Shimmer(dB), Shimmer:APQ3, Shimmer:APQ5, MDVP:APQ, Shimmer:DDA - Several measures of variation in amplitude</li>
+    <li>NHR, HNR - Two measures of the ratio of noise to tonal components in the voice</li>
+    <li>RPDE, D2 - Two nonlinear dynamical complexity measures</li>
+    <li>DFA - Signal fractal scaling exponent</li>
+    <li>spread1, spread2, PPE - Three nonlinear measures of fundamental frequency variation</li>
+  </ul>
   <form class="row gx-3 gy-3 align-items-center" id="parkinsons-form">
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="fo">fo</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -12,9 +25,9 @@
         name="fo"
         placeholder="MDVP:Fo(Hz)"
       />
+      <label for="fo">MDVP:Fo(Hz)</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="fhi">fhi</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -23,9 +36,9 @@
         name="fhi"
         placeholder="MDVP:Fhi(Hz)"
       />
+      <label for="fhi">MDVP:Fhi(Hz)</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="flo">flo</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -34,9 +47,9 @@
         name="flo"
         placeholder="MDVP:Flo(Hz)"
       />
+      <label for="flo">MDVP:Flo(Hz)</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="Jitter_percent">Jitter_percent</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -45,9 +58,9 @@
         name="Jitter_percent"
         placeholder="MDVP:Jitter(%)"
       />
+      <label for="Jitter_percent">MDVP:Jitter(%)</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="Jitter_Abs">Jitter_Abs</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -56,9 +69,9 @@
         name="Jitter_Abs"
         placeholder="MDVP:Jitter(Abs)"
       />
+      <label for="Jitter_Abs">MDVP:Jitter(Abs)</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="RAP">RAP</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -67,9 +80,9 @@
         name="RAP"
         placeholder="MDVP:RAP"
       />
+      <label for="RAP">MDVP:RAP</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="PPQ">PPQ</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -78,9 +91,9 @@
         name="PPQ"
         placeholder="MDVP:PPQ"
       />
+      <label for="PPQ">MDVP:PPQ</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="DDP">DDP</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -89,9 +102,9 @@
         name="DDP"
         placeholder="Jitter:DDP"
       />
+      <label for="DDP">Jitter:DDP</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="Shimmer">Shimmer</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -100,9 +113,9 @@
         name="Shimmer"
         placeholder="MDVP:Shimmer"
       />
+      <label for="Shimmer">MDVP:Shimmer</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="Shimmer_dB">Shimmer_dB</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -111,9 +124,9 @@
         name="Shimmer_dB"
         placeholder="MDVP:Shimmer(dB)"
       />
+      <label for="Shimmer_dB">MDVP:Shimmer(dB)</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="APQ3">APQ3</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -122,9 +135,9 @@
         name="APQ3"
         placeholder="Shimmer:APQ3"
       />
+      <label for="APQ3">Shimmer:APQ3</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="APQ5">APQ5</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -133,9 +146,9 @@
         name="APQ5"
         placeholder="Shimmer:APQ5"
       />
+      <label for="APQ5">Shimmer:APQ5</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="APQ">APQ</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -144,9 +157,9 @@
         name="APQ"
         placeholder="MDVP:APQ"
       />
+      <label for="APQ">MDVP:APQ</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="DDA">DDA</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -155,9 +168,9 @@
         name="DDA"
         placeholder="Shimmer:DDA"
       />
+      <label for="DDA">Shimmer:DDA</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="NHR">NHR</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -166,9 +179,9 @@
         name="NHR"
         placeholder="NHR"
       />
+      <label for="NHR">NHR</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="HNR">HNR</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -177,9 +190,9 @@
         name="HNR"
         placeholder="HNR"
       />
+      <label for="HNR">HNR</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="RPDE">RPDE</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -188,9 +201,9 @@
         name="RPDE"
         placeholder="RPDE"
       />
+      <label for="RPDE">RPDE</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="DFA">DFA</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -199,9 +212,9 @@
         name="DFA"
         placeholder="DFA"
       />
+      <label for="DFA">DFA</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="spread1">spread1</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -210,9 +223,9 @@
         name="spread1"
         placeholder="spread1"
       />
+      <label for="spread1">spread1</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="spread2">spread2</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -221,9 +234,9 @@
         name="spread2"
         placeholder="spread2"
       />
+      <label for="spread2">spread2</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="D2">D2</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -232,9 +245,9 @@
         name="D2"
         placeholder="D2"
       />
+      <label for="D2">D2</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="PPE">PPE</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -243,6 +256,7 @@
         name="PPE"
         placeholder="PPE"
       />
+      <label for="PPE">PPE</label>
     </div>
     <div class="col-auto">
       <button type="submit" class="btn btn-primary">Predict</button>

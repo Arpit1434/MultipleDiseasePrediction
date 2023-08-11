@@ -1,9 +1,26 @@
 {% extends "layout.html" %} {% block body %}
 <div class="container my-4">
-  <h1 class="my-4"><i style="font-size:32px" class="fa mx-2">&#xf21e;</i>Heart Disease Prediction</h1>
+  <h1 class="my-4">
+    <i style="font-size: 32px" class="fa mx-2">&#xf21e;</i>Heart Disease
+    Prediction
+  </h1>
+  <ul>
+    <li>age</li>
+    <li>sex</li>
+    <li>chest pain type (4 values)</li>
+    <li>resting blood pressure</li>
+    <li>serum cholestoral in mg/dl</li>
+    <li>fasting blood sugar > 120 mg/dl</li>
+    <li>resting electrocardiographic results (values 0,1,2)</li>
+    <li>maximum heart rate achieved</li>
+    <li>exercise induced angina</li>
+    <li>oldpeak = ST depression induced by exercise relative to rest</li>
+    <li>the slope of the peak exercise ST segment</li>
+    <li>number of major vessels (0-3) colored by flourosopy</li>
+    <li>thal: 0 = normal; 1 = fixed defect; 2 = reversable defect</li>
+  </ul>
   <form class="row gx-3 gy-3 align-items-center" id="heart-disease-form">
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="age">age</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -12,27 +29,27 @@
         name="age"
         placeholder="Age"
       />
+      <label for="age form-floating">Age</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="sex">sex</label>
+    <div class="form-floating col-sm-3">
       <select class="form-select" id="sex" name="sex">
-        <option selected>Sex</option>
+        <option selected>...</option>
         <option value="1">Male</option>
         <option value="0">Female</option>
       </select>
+      <label for="sex">Sex</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="cp">cp</label>
+    <div class="form-floating col-sm-3">
       <select class="form-select" id="cp" name="cp">
-        <option selected>Chest Pain types</option>
+        <option selected>...</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
       </select>
+      <label for="cp">Chest Pain types</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="trestbps">trestbps</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -41,9 +58,9 @@
         name="trestbps"
         placeholder="Resting Blood Pressure"
       />
+      <label for="trestbps">Resting Blood Pressure</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="chol">chol</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -52,26 +69,26 @@
         name="chol"
         placeholder="Serum Cholestoral in mg/dl"
       />
+      <label for="chol">Serum Cholestoral in mg/dl</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="fbs">fbs</label>
+    <div class="form-floating col-sm-3">
       <select class="form-select" id="fbs" name="fbs">
-        <option selected>Fasting Blood Sugar > 120 mg/dl</option>
+        <option selected>...</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
+      <label for="fbs">Fasting Blood Sugar > 120 mg/dl</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="restecg">restecg</label>
+    <div class="form-floating col-sm-3">
       <select class="form-select" id="restecg" name="restecg">
-        <option selected>Resting Electrocardiographic results</option>
+        <option selected>...</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
+      <label for="restecg">Resting Electrocardiographic results</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="thalach">thalach</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -80,17 +97,17 @@
         name="thalach"
         placeholder="Maximum Heart Rate achieved"
       />
+      <label for="thalach">Maximum Heart Rate achieved</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="exang">exang</label>
+    <div class="form-floating col-sm-3">
       <select class="form-select" id="exang" name="exang">
-        <option selected>Exercise Induced Angina</option>
+        <option selected>...</option>
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
+      <label for="exang">Exercise Induced Angina</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="oldpeak">oldpeak</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -99,9 +116,9 @@
         name="oldpeak"
         placeholder="ST depression induced by exercise"
       />
+      <label for="oldpeak">ST depression induced by exercise</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="slope">slope</label>
+    <div class="form-floating col-sm-3">
       <input
         type="number"
         step="any"
@@ -110,25 +127,26 @@
         name="slope"
         placeholder="Slope of the peak exercise ST segment"
       />
+      <label for="slope">Slope of the peak exercise ST segment</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="ca">ca</label>
+    <div class="form-floating col-sm-3">
       <select class="form-select" id="ca" name="ca">
-        <option selected>Major vessels colored by flourosopy</option>
+        <option selected>...</option>
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
       </select>
+      <label for="ca">Major vessels colored by flourosopy</label>
     </div>
-    <div class="col-sm-3">
-      <label class="visually-hidden" for="thal">thal</label>
+    <div class="form-floating col-sm-3">
       <select class="form-select" id="thal" name="thal">
-        <option selected>thal</option>
+        <option selected>...</option>
         <option value="1">normal</option>
         <option value="2">fixed defect</option>
         <option value="3">reversable defect</option>
       </select>
+      <label for="thal">thal</label>
     </div>
     <div class="col-auto">
       <button type="submit" class="btn btn-primary">Predict</button>
