@@ -28,7 +28,7 @@ With the eruption of a new era of AI/ML, This project aims to help medical profe
 4. Predicting on new data using the ML model
 5. Hosting it on [Render](https://render.com/)
 
-## Techonologies Used
+## The TechStack
 
 1. [Scikit learn](https://scikit-learn.org/stable/)
 2. [Intel oneAPI](https://www.intel.com/content/www/us/en/developer/tools/oneapi/overview.html)
