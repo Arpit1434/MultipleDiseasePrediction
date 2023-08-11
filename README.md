@@ -1,6 +1,6 @@
 # Multiple Disease Prediction
 
-This Machine Learning model uses [SVC(Support Vector Classification)](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) to classsify and predict people with diseases like Diabetes, Heart Diseases, and Parkinson's. I have used datasets from kaggle openly available to train my model for which I would like to give due credit.
+This Machine Learning model uses [SVC(Support Vector Classification)](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) to classify and predict people with diseases like Diabetes, Heart Diseases, and Parkinson's. I have used datasets from kaggle openly available to train my model for which I would like to give due credit.
 - [Diabetes Dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set)
 - [Heart Disease Dataset](https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset)
 - [Parkinson's Dataset](https://www.kaggle.com/datasets/vikasukani/parkinsons-disease-data-set)
