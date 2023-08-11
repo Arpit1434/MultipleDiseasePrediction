@@ -27,3 +27,10 @@ With the eruption of a new era of AI/ML, This project aims to help medical profe
 3. Using routes for renering HTML and handling middleware
 4. Predicting on new data using the ML model
 5. Hosting it on [Render](https://render.com/)
+
+## The TechStack
+
+1. [Scikit learn](https://scikit-learn.org/stable/)
+2. [Intel oneAPI](https://www.intel.com/content/www/us/en/developer/tools/oneapi/overview.html)
+3. [Flask](https://flask.palletsprojects.com/en/2.3.x/)
+4. [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
