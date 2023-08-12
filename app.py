@@ -1,4 +1,7 @@
 import joblib
+import random
+import numpy as np
+import pandas as pd
 from flask import Flask, redirect, render_template, url_for, request, jsonify
 
 app = Flask(__name__)
@@ -21,6 +24,30 @@ def heart():
 def parkinsons():
     staticURL = url_for('static', filename='scripts/parkinsonsform.js')
     return render_template("parkinsons.html", staticURL=staticURL)
+
+@app.route("/diabetes/random")
+def diabetesrandom():
+    data_frame = pd.read_csv("./multiple_disease/diabetes.csv")
+    random_row_index = random.randint(0, len(data_frame) - 1)
+    random_row = data_frame.iloc[random_row_index]
+    random_values = {column: int(random_row[column]) if isinstance(random_row[column], np.int64) else random_row[column] for column in data_frame.columns}
+    return jsonify(random_values)
+
+@app.route("/heart/random")
+def heartrandom():
+    data_frame = pd.read_csv("./multiple_disease/heart.csv")
+    random_row_index = random.randint(0, len(data_frame) - 1)
+    random_row = data_frame.iloc[random_row_index]
+    random_values = {column: int(random_row[column]) if isinstance(random_row[column], np.int64) else random_row[column] for column in data_frame.columns}
+    return jsonify(random_values)
+
+@app.route("/parkinsons/random")
+def parkinsonsrandom():
+    data_frame = pd.read_csv("./multiple_disease/parkinsons.csv")
+    random_row_index = random.randint(0, len(data_frame) - 1)
+    random_row = data_frame.iloc[random_row_index]
+    random_values = {column: int(random_row[column]) if isinstance(random_row[column], np.int64) else random_row[column] for column in data_frame.columns}
+    return jsonify(random_values)
 
 @app.route("/diabetes/predict", methods=["POST"])
 def diabetespredict():
