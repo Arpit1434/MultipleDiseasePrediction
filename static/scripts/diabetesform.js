@@ -93,9 +93,7 @@ randomButton.addEventListener("click", async () => {
       <h5 class="card-title">Actual Result: ${
         outcome ? "Has Diabetes" : "Does not have Diabetes"
       }</h5>
-      <p class="card-text">Prediction</p>
-      <p class="card-text">
-      ${formResponseData.message}
+      <p class="card-text">Prediction: ${formResponseData.message}
       </p>
     </div>
   </div>
